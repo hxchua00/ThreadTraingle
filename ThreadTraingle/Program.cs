@@ -40,20 +40,9 @@ namespace ThreadTraingle
             Triangle t = new Triangle();
             Console.WriteLine("Enter array limit: ");
             int limit = Convert.ToInt32(Console.ReadLine());
-            //bool cont = true;
 
             Thread s = new Thread(() => { t.addToArray(limit); });
             s.Start();
-            //while (cont)
-            //{
-            //    s.Start();
-            //    string input = Console.ReadLine();
-            //    if(input == "q" || input == "Q")
-            //    {
-            //        cont = false;
-            //        s.Abort();
-            //    }
-            //}
 
             Console.ReadLine();
         }
