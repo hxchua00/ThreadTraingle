@@ -9,7 +9,7 @@ namespace ThreadTraingle
 {
     class Triangle
     {
-        public void addToArray(int num)
+        public static void addToArray(int num)
         {
             //Set i = 1, so that the number of printed input == num
             for (int i=1; i <= num; i++)
@@ -37,11 +37,10 @@ namespace ThreadTraingle
     {
         static void Main(string[] args)
         {
-            Triangle t = new Triangle();
             Console.WriteLine("Enter array limit: ");
             int limit = Convert.ToInt32(Console.ReadLine());
 
-            Thread s = new Thread(() => { t.addToArray(limit); });
+            Thread s = new Thread(() => { Triangle.addToArray(limit); });
             s.Start();
 
             Console.ReadLine();
