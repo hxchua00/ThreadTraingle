@@ -11,13 +11,15 @@ namespace ThreadTraingle
     {
         public void addToArray(int num)
         {
+            //Set i = 1, so that the number of printed input == num
             for (int i=1; i <= num; i++)
             {
                 int temp = 0;
                 int temp1 = 1;
                 Console.Write(temp1+"\t");
-                
-                for(int j=1; j < i; j++)
+
+                //Set J = 1, so that the number of printed input == num
+                for (int j=1; j < i; j++)
                 {
                     int temp2 = temp + temp1;
                    
